@@ -25,6 +25,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   -webkit-box-sizing: border-box;
@@ -434,6 +435,16 @@ button {
 .listing__event-card {
   max-width: 405px;
   width: calc(33.333% - 40px);
+}
+.listing__link {
+  margin-top: 85px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
 }
 .contacts-item {
   display: -webkit-box;
@@ -948,7 +959,13 @@ button {
   height: 100%;
 }
 .page-header__nav {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0 auto;
 }
 .page-header__nav-link {
   margin: 0 25px;
@@ -981,6 +998,18 @@ button {
 .page-header__user-btn:active {
   background-color: #1f1e1e;
   color: #ffffff;
+}
+.page-header__right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 202px;
 }
 .field__title {
   margin: 0 0 10px;
@@ -1213,8 +1242,8 @@ button {
   font-weight: 400;
   color: #1f1e1e;
 }
-.about__text--3 {
-  margin-bottom: 90px;
+.about__text--mb110 {
+  margin-bottom: 110px;
 }
 .about__block {
   display: -webkit-box;
@@ -1316,6 +1345,7 @@ button {
      object-fit: contain;
 }
 .about__block3-wrapper {
+  height: 230px;
   max-width: 344px;
   width: 100%;
 }
