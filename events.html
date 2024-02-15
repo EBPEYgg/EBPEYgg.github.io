@@ -25,12 +25,28 @@
         <a href="index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="index.html#about" class="page-header__nav-link">О нас</a>
         <a href="index.html#contacts" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <picture class="page-header__nav-logout-icon">
+              <img src="assets/icons/door.svg" class="page-header__nav-logout-icon" width="24" height="24">
+            </picture>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <picture class="page-header__user-icon">
+            <img src="assets/icons/door.svg" class="page-header__user-icon" width="21" height="18">
+          </picture>
         </a>
+
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
 
@@ -136,7 +152,7 @@
           <button type="button" class="events__show-button">
             <span class="events__show-text">Показать еще</span>
             <img src="assets/images/right-arrow.svg" class="events__button-icon" width="91" height="60">
-          </button>
+                        </button>
         </div>
 
         <section class="events__services">
@@ -251,7 +267,7 @@
             <div class="offers__container events__offers-container">
               <p class="offers__text">Я хочу:</p>
               <div class="offers__wrapper">
-                <a href="#" class="button button--red offers__hold-event-button">Провести мероприятие</a>
+                <a href="#" class="button button--red offers__hold-event-button" id="js-eventOpenBtn">Провести мероприятие</a>
                 <a href="#" class="offers__become-tenant-button button">Стать арендатором</a>
               </div>
             </div>
@@ -262,7 +278,7 @@
           <div class="events__info-item">
             <div class="events__info-picture">
               <img src="assets/images/information.svg" class="events__info-picture-icon" width="24" height="24">
-            </div>
+                            </div>
             <h4 class="events__info-title">
               Цены
             </h4>
@@ -273,7 +289,7 @@
           <div class="events__info-item">
             <div class="events__info-picture">
               <img src="assets/images/contact.svg" class="events__info-picture-icon" width="24" height="24">
-            </div>
+                            </div>
             <h4 class="events__info-title">
               Контакты
             </h4>
@@ -286,7 +302,7 @@
           <div class="events__info-item">
             <div class="events__info-picture">
               <img src="assets/images/handshake.svg" class="events__info-picture-icon" width="24" height="24">
-            </div>
+                            </div>
             <h4 class="events__info-title">
               Преимущество
             </h4>
@@ -350,7 +366,7 @@
   <div id="event-pp" class="pp">
     <div class="pp__container">
       <div class"pp__sticky-close">
-        <button type="button" class="pp__sticky-btn">
+        <button type="button" class="pp__sticky-btn js-ppCloseBtn">
           <svg class="pp__btn-icon" width="24" height="24">
             <use xlink:href="src/assets/svg-sprite/fi_x.svg#x"></use>
           </svg>
@@ -458,7 +474,7 @@
 
             <div class="form__btns">
               <button type="submit" class="form__btn btn">Отправить</button>
-              <button type="button" class="form__btn btn">Закрыть</button>
+              <button type="button" class="form__btn btn js-ppCloseBtn">Закрыть</button>
             </div>
           </div>
         </div>

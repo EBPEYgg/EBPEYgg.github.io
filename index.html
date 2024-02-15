@@ -25,12 +25,28 @@
         <a href="index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="index.html#about" class="page-header__nav-link">О нас</a>
         <a href="index.html#contacts" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <picture class="page-header__nav-logout-icon">
+              <img src="assets/icons/door.svg" class="page-header__nav-logout-icon" width="24" height="24">
+            </picture>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <picture class="page-header__user-icon">
+            <img src="assets/icons/door.svg" class="page-header__user-icon" width="21" height="18">
+          </picture>
         </a>
+
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
 
@@ -55,7 +71,7 @@
         <div class="offers__container home__offers">
           <p class="offers__text">Я хочу:</p>
           <div class="offers__wrapper">
-            <a href="#" class="button button--red offers__hold-event-button">Провести мероприятие</a>
+            <a href="#" class="button button--red offers__hold-event-button" id="js-eventOpenBtn">Провести мероприятие</a>
             <a href="#" class="offers__become-tenant-button button">Стать арендатором</a>
           </div>
         </div>
@@ -114,41 +130,41 @@
           <div class="upcoming__container">
             <h2 class="upcoming__title section-title">Мероприятия</h2>
             <div class="upcoming__events-list">
-              <article class="card-event upcoming__card-event">
-                <a href="#" class="card-event__link">
-                  <picture class="card-event__picture">
-                    <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="card-event__picture-img" />
+              <article class="event-card upcoming__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__picture-img" />
                   </picture>
-                  <h4 class="card-event__title">Собираемся и слушаем альбом Nirvana. Nirvana</h4>
-                  <p class="card-event__text">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-                  <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
+                  <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana.</h4>
+                  <p class="event-card__text">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                  <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
                 </a>
               </article>
-              <article class="card-event upcoming__card-event">
-                <a href="#" class="card-event__link">
-                  <picture class="card-event__picture">
-                    <img src="assets/images/events/stuff.jpg" alt="stuff" class="card-event__picture-img" />
+              <article class="event-card upcoming__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__picture-img" />
                   </picture>
-                  <h4 class="card-event__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-                  <p class="card-event__text">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-                  <time datetime="2022-12-14T18:30" class="card-event__time">14.12.2022 | начало 18.30</time>
+                  <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                  <p class="event-card__text">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                  <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
                 </a>
               </article>
-              <article class="card-event upcoming__card-event">
-                <a href="event.html" class="card-event__link">
-                  <picture class="card-event__picture">
-                    <img src="assets/images/events/sade.jpg" alt="sade" class="card-event__picture-img" />
+              <article class="event-card upcoming__event-card">
+                <a href="event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/Sade.jpg" alt="sade" class="event-card__picture-img" />
                   </picture>
-                  <h4 class="card-event__title">Вечер | The Best of Sade</h4>
-                  <p class="card-event__text">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-                  <time datetime="2022-12-16T20:00" class="card-event__time">16.12.2022 | начало 20.00</time>
+                  <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                  <p class="event-card__text">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                  <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
                 </a>
               </article>
             </div>
             <div class="upcoming__slider">
               <img src="assets/images/left-arrow.svg" class="link__icon" width="91" height="60"/>
-              <img src="assets/images/scroll-bar.svg" class="link__icon" width="99" height="2"/>
-              <img src="assets/images/right-arrow.svg" class="link__icon" width="91" height="60"/>
+                <img src="assets/images/scroll-bar.svg" class="link__icon" width="99" height="2"/>
+                <img src="assets/images/right-arrow.svg" class="link__icon" width="91" height="60"/>
             </div>
             <a href="events.html" class="link upcoming__link">Смотреть все</a>
           </div>
@@ -224,7 +240,7 @@
               <div class="contacts__item">
                 <div class="contacts__item__img">
                   <img src="assets/images/location.svg" class="link__icon" width="24" height="24">
-                </div>
+                                    </div>
 
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Томск, Белая 8</h4>
@@ -236,7 +252,7 @@
               <div class="contacts__item">
                 <div class="contacts__item__img">
                   <img src="assets/images/home.svg" class="link__icon" width="24" height="24">
-                </div>
+                                    </div>
 
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел аренды</h4>
@@ -252,7 +268,7 @@
               <div class="contacts__item">
                 <div class="contacts__item__img">
                   <img src="assets/images/star.svg" class="link__icon" width="24" height="24">
-                </div>
+                                    </div>
 
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел мероприятий</h4>
@@ -333,7 +349,7 @@
   <div id="event-pp" class="pp">
     <div class="pp__container">
       <div class"pp__sticky-close">
-        <button type="button" class="pp__sticky-btn">
+        <button type="button" class="pp__sticky-btn js-ppCloseBtn">
           <svg class="pp__btn-icon" width="24" height="24">
             <use xlink:href="src/assets/svg-sprite/fi_x.svg#x"></use>
           </svg>
@@ -441,7 +457,7 @@
 
             <div class="form__btns">
               <button type="submit" class="form__btn btn">Отправить</button>
-              <button type="button" class="form__btn btn">Закрыть</button>
+              <button type="button" class="form__btn btn js-ppCloseBtn">Закрыть</button>
             </div>
           </div>
         </div>
@@ -449,6 +465,7 @@
     </div>
   </div>
 
+  <script src="scripts/dev/main.js"></script>
 </body>
 
 </html>
