@@ -17,7 +17,9 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
-        <img src="assets/images/logo.svg" class="page-header__logo-img">
+        <svg class="page-header__logo-img" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
       </a>
 
       <nav class="page-header__nav">
@@ -31,9 +33,9 @@
             Александр С.
           </a>
           <a href="#" class="page-header__nav-logout">
-            <picture class="page-header__nav-logout-icon">
-              <img src="assets/icons/door.svg" class="page-header__nav-logout-icon" width="24" height="24">
-            </picture>
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
           </a>
         </div>
       </nav>
@@ -41,12 +43,12 @@
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
-          <picture class="page-header__user-icon">
-            <img src="assets/icons/door.svg" class="page-header__user-icon" width="21" height="18">
-          </picture>
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
 
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
 
@@ -151,8 +153,10 @@
         <div class="events__show-more">
           <button type="button" class="events__show-button">
             <span class="events__show-text">Показать еще</span>
-            <img src="assets/images/right-arrow.svg" class="events__button-icon" width="91" height="60">
-                        </button>
+            <svg class="events__button-icon" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#right-arrow"></use>
+            </svg>
+          </button>
         </div>
 
         <section class="events__services">
@@ -277,8 +281,10 @@
         <div class="events__info">
           <div class="events__info-item">
             <div class="events__info-picture">
-              <img src="assets/images/information.svg" class="events__info-picture-icon" width="24" height="24">
-                            </div>
+              <svg class="events__info-picture-icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#information"></use>
+              </svg>
+            </div>
             <h4 class="events__info-title">
               Цены
             </h4>
@@ -288,8 +294,10 @@
           </div>
           <div class="events__info-item">
             <div class="events__info-picture">
-              <img src="assets/images/contact.svg" class="events__info-picture-icon" width="24" height="24">
-                            </div>
+              <svg class="events__info-picture-icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#contact"></use>
+              </svg>
+            </div>
             <h4 class="events__info-title">
               Контакты
             </h4>
@@ -301,8 +309,10 @@
           </div>
           <div class="events__info-item">
             <div class="events__info-picture">
-              <img src="assets/images/handshake.svg" class="events__info-picture-icon" width="24" height="24">
-                            </div>
+              <svg class="events__info-picture-icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+              </svg>
+            </div>
             <h4 class="events__info-title">
               Преимущество
             </h4>
@@ -349,38 +359,46 @@
         </div>
         <div class="page-footer__links">
           <a href="#" class="page-footer__link">
-            <img src="assets/images/insta.svg" class="page-footer__link-icon" width="58" height="58"/>
+            <svg class="page-footer__link-icon" width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#insta"></use>
+            </svg>
           </a>
           <a href="#" class="page-footer__link">
-            <img src="assets/images/vk.svg" class="page-footer__link-icon" width="58" height="58"/>
+            <svg class="page-footer__link-icon" width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
+            </svg>
           </a>
         </div>
         <div class="page-footer__signature">
           <p class="page-footer__signature-text">Создание и продвижение</p>
-          <img src="assets/images/tagree.svg" class="page-footer__signature-icon" width="56" height="17"/>
+          <svg class="page-footer__signature-icon" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
         </div>
       </div>
     </div>
   </footer>
 
-  <div id="event-pp" class="pp">
+  <div class="pp" id="js-eventPP">
     <div class="pp__container">
-      <div class"pp__sticky-close">
+      <div class="pp__sticky-close">
         <button type="button" class="pp__sticky-btn js-ppCloseBtn">
           <svg class="pp__btn-icon" width="24" height="24">
-            <use xlink:href="src/assets/svg-sprite/fi_x.svg#x"></use>
+            <use xlink:href="assets/icons/symbols.svg#fi_x"></use>
           </svg>
         </button>
       </div>
 
       <div class="pp__wrapper">
+
+
         <h3 class="pp__title">
           Заполните форму
           <br />
           и мы подберем площадку
         </h3>
 
-        <div class="pp_form form">
+        <div class="pp_form form" id="js-eventForm">
           <div class="form__list">
             <div class="form__field form__field--w50 field">
               <h6 class="field__title">
@@ -473,8 +491,8 @@
             </label>
 
             <div class="form__btns">
-              <button type="submit" class="form__btn btn">Отправить</button>
-              <button type="button" class="form__btn btn js-ppCloseBtn">Закрыть</button>
+              <button type="submit" class="form__btn form__btn--w50 btn">Отправить</button>
+              <button type="button" class="form__btn form__btn--w50 btn js-ppCloseBtn">Закрыть</button>
             </div>
           </div>
         </div>
